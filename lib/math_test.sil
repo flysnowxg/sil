@@ -1,0 +1,9 @@
+load("math.sil");
+print("π="+pi()+"\n");
+print("开平方根:\n");
+var i=1;
+while(i<20)
+{
+   print("√"+i+"="+sqrt(i)+"\n");
+   i=i+1;
+}

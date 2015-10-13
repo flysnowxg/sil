@@ -1,0 +1,58 @@
+//这些函数用c++扩展来做会更快捷，下面只是作为例子用于测试
+//求平方根
+function sqrt(num)
+{
+    var left=1.0;
+    var right=num/left;
+    if(left>right)
+    {
+        var tmp=left;
+        left=right;
+        right=tmp;
+    }
+    while((right-left)>1e-14)
+    {
+        right=(left+right)/2;
+        left=num/right;
+        if(left>right)
+        {
+            var tmp=left;
+            left=right;
+            right=left;
+        }
+    }
+    return left;
+}
+//已知道sin(a);求sin(a/2);
+function half_sin(sin_value)
+{
+    var ac=1.0;
+    var ab=1.0;
+    var ce=sin_value;
+    var df=ce/2.0;
+    var tmp=ac*ac-ce*ce;
+    var ae=sqrt(tmp);
+    var ef=(ab-ae)/2.0;
+    var af=ae+ef;
+    var tmp2=af*af+df*df;
+    var ad=sqrt(tmp2);
+    var result=df/ad;
+    return result;
+}
+//求圆周率
+function pi()
+{
+    var part=8.0;
+    var sin_value=sqrt(2)/2;
+    for(var i=1;i<30;i=i+1)
+    {
+        sin_value=half_sin(sin_value);
+        part=part*2;
+        i=i+1;
+    }
+    return half_sin(sin_value)*2*part/2;
+}
+
+
+
+

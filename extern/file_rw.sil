@@ -1,0 +1,8 @@
+var file=fopen("ftest.txt","a");
+fwrite(file,"hello sil\r\n");
+fclose(file);
+print("文件读写完毕!\n");
+print("\nfile_rw.sil脚本内容:\n");
+bat("type ..\\extern\\file_rw.sil");
+print("\nftest.sil内容:\n");
+bat("type ftest.txt");
