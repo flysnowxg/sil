@@ -1,3 +1,6 @@
+# sil语言  
+作者：flysnowxg  
+emal:flysnowxg@qq.com  
 sil语言（simple interpretative lanuage）是一个简单的脚本语言，只是一个玩具，目的是演示用简短的代码去创建一个可用的脚本语言  
 这样一个玩具会是怎么样的呢？  
 sil的设计目标：  
